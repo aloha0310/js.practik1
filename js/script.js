@@ -1,11 +1,19 @@
 "use strict";
  
-//alert('hello'); всплывающее окно 
-//const result = confirm('are you here');всплывающее окно ок и отмена - в консоли появиться ответ пользователя 
-//const answer = +prompt('вам есть 18?', '18'); всплывающее окно с вводимом текстом (+ переводит из строки в числа)
-//console.log(typeof(answer)); проверить тип данных (строка или что)-(ответ пользователя всегда строка)
-let incr = 10,
-    decr = 10;
+const numberOfFilms = +prompt('Сколько фильмов уже?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actores: {},
+    genres: [],
+    privat: false
+};
 
-incr++;
-decr--;
+const a = prompt('Сколько фильмов уже?', ''),
+      b = prompt('На сколько оцените его', ''),
+      c = prompt('Сколько фильмов уже?', ''),
+      d = prompt('На сколько оцените его', '');
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
